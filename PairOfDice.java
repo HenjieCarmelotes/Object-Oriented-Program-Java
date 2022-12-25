@@ -14,7 +14,7 @@ public class PairOfDice {
 		// Constructor. Creates a pair of dice that
 		// are initially showing the values val1 and val2.
 		die1 = val1; // Assign specified values
-		die2 = val2; // to the instance variables.
+		die2 = val2; // to the instance variable.
 	}
 	public void roll() {
 		// Roll the dice by setting each of the dice to be
