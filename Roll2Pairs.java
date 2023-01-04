@@ -13,27 +13,38 @@ public class Roll2Pairs {
 		secondDice = new PairOfDice();
 		
 		int countRolls; // Counts how many times the two pairs of
-		// dice have been rolled.
+						// dice have been rolled.
 		
-		int total1; // Total showing on first pair of dice.
+		int firsDiceTotal;
 		
-		int total2; // Total showing on second pair of dice.
+		int secondDiceTotal;
+		
 		
 		countRolls = 0;
 		
 		do { // Roll the two pairs of dice until totals are the same.
 			
 			firstDice.roll(); // Roll the first pair of dice.
-			total1 = firstDice.die1 + firstDice.die2; // Get total.
-			System.out.println("First pair comes up " + total1);
+			firsDiceTotal = firstDice.getTotal(); // Get total.
+			firstDice.toString();
+			System.out.println("First pair comes up " + firstDice);
+			
 			secondDice.roll(); // Roll the second pair of dice.
-			total2 = secondDice.die1 + secondDice.die2; // Get total.
-			System.out.println("Second pair comes up " + total2);
+			secondDice.toString();
+			secondDiceTotal = secondDice.getTotal(); // Get total.
+			System.out.println("Second pair comes up " + secondDice);
+			
+			
 			countRolls++; // Count this roll.
+			
 			System.out.println(); // Blank line.
-		} while (total1 != total2);
+			
+		} while ( firsDiceTotal != secondDiceTotal);
+		
+		
 			System.out.println("It took " + countRolls
-					+ " rolls until the totals were the same.");
+					+ " rolls until the totals of 2 dice were the same.");
 	} //end of main
+
 
 }
